@@ -5,20 +5,23 @@ module.exports = {
     "database": "db_newsletter",
     "port": "3307",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    dialectModule: require("mysql2"),
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "db_newsletter",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    dialectModule: require("mysql2"),
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "db_newsletter",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    dialectModule: require("mysql2"),
   }
 }

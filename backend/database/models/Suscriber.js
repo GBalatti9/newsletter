@@ -10,12 +10,20 @@ module.exports = (sequelize, dataTypes) => {
         },
         email: {
             type: dataTypes.STRING,
+        },
+        created_at: {
+            type: dataTypes.DATE,
+        },
+        deleted_at: {
+            type: dataTypes.DATE,
+            allowNull: true,
         }
     }
 
     let config = {
         tablename: 'suscribers',
-        timestamps: false,
+        createdAt: 'created_at', 
+        updatedAt: false, 
     }
 
     const Suscriber = sequelize.define(alias, cols, config);

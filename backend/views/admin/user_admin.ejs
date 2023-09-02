@@ -17,12 +17,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>ejemplo@email.com</td>
-                <td><button>Editar</button></td>
-                <td><button>Eliminar</button></td>
-            </tr>
+            <% suscribers.forEach(suscriber => { %>
+                <tr>
+                    <td> <%= suscriber.id %> </td>
+                    <td> <%= suscriber.email %> </td>
+                    <td><button>Editar</button></td>
+                    <td>
+                        <form action="/admin?_method=delete" method="POST">
+                            <input type="hidden" name="id" value="<%= suscriber.id %>">
+                            <input type="submit" value="Eliminar">
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
         </tbody>
     </table>
 </body>

@@ -7,4 +7,7 @@ const router = express.Router();
 // @GET /
 router.get('/admin', adminControllers.getTableUsers);
 
+// @DELETE
+router.post('/admin', adminControllers.deleteUser)
+
 module.exports = router;

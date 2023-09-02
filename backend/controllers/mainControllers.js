@@ -1,10 +1,19 @@
+const { Suscriber } = require('../database/models');
+
 module.exports = {
     getRegister: (req, res) => {
         res.render('home')
     },
 
-    postRegister: (req, res) => {
-        console.log(req.body);
+    postRegister: async (req, res) => {
+        let email = req.body.emailSuscriber;
+        try {
+            await Suscriber.create({
+                email: email
+            })
+        } catch (error) {
+            console.log(error);   
+        }
         res.send('Registro con exito');
     }
 }
