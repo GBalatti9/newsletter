@@ -1,6 +1,6 @@
 module.exports = {
     getLogin: (req, res) => {
-        res.send('login');
+        res.render('home')
     },
 
     postLogin: (req, res) => {
