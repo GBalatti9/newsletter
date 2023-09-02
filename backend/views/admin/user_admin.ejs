@@ -23,7 +23,7 @@
                     <td> <%= suscriber.email %> </td>
                     <td><button>Editar</button></td>
                     <td>
-                        <form action="/admin?_method=delete" method="POST">
+                        <form action="/admin?_method=put" method="POST">
                             <input type="hidden" name="id" value="<%= suscriber.id %>">
                             <input type="submit" value="Eliminar">
                         </form>

@@ -7,10 +7,22 @@ module.exports = {
     },
 
     deleteUser: async (req, res) => {
-        const suscriber = await Suscriber.destroy({
-            where: {
-                id: 1
-            }
-        });
+        try {
+            const suscriberId = req.body.id;
+            console.log(suscriberId);
+            await Suscriber.update(
+                {
+                    deleted_at: new Date(),
+                },
+                {
+                    where: {
+                        id: suscriberId
+                    }
+                }
+            );
+        } catch (error) {
+            console.log(error);
+        }
+        res.redirect('/');
     }
 }
