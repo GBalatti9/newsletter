@@ -1,9 +1,10 @@
 module.exports = {
-    getLogin: (req, res) => {
+    getRegister: (req, res) => {
         res.render('home')
     },
 
-    postLogin: (req, res) => {
-        res.send('login');
+    postRegister: (req, res) => {
+        console.log(req.body);
+        res.send('Registro con exito');
     }
 }

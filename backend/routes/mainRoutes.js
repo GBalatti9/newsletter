@@ -4,11 +4,11 @@ const mainControllers = require('../controllers/mainControllers');
 
 const router = express.Router();
 
-// @GET /login
-router.get('/', mainControllers.getLogin);
+// @GET /
+router.get('/', mainControllers.getRegister);
 
-// @POST /login
-router.post('/login', mainControllers.postLogin);
+// @POST /
+router.post('/', mainControllers.postRegister);
 
 
 module.exports = router;
