@@ -1,5 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 120px;
+}
+
+.title{
+    font-family: Bebas Neue, sans-serif;
+    font-size: 2.5rem;
+}
+
+.subtitle{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form{
+    /* border: 1px solid black; */
+    border-radius: 5px;
+}
+
+.input-suscription{
+    display: flex;
+    justify-content: space-between;
+    /* width: fit-content; */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.email-suscriber{
+    border: none;
+    padding: 3% 0.5%;
+    width: 70%;
+    outline: none;
+}
+.btn-submit-login{
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-submit-login:hover{
+    background-color: rgb(87, 87, 87);
+    color: white;
 }
