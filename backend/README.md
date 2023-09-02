@@ -1,0 +1,1 @@
+Este es un proyecto personal de newsletter. La idea es crear una plataforma que permita que los usuarios se suscriban, que me permita cargar mis entrevistas a distintos programadores y que una vez a la semana se envie automáticamente. Será un lindo desafío.
