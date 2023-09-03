@@ -64,6 +64,23 @@ body{
     /* background-color: rgb(175, 175, 175); */
 }
 
+.content{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2%;
+}
+
+#h1Title{
+    /* border: none; */
+    outline: none;
+    resize: none;
+}
+
+
+
 @media only screen and (min-width: 480px){
     .edit-elements{
         padding: 1%;
