@@ -5,6 +5,8 @@ const methodOverride = require('method-override');
 const app = express();
 
 const { mainRoutes, adminRoutes } = require('./routes');
+const sendEmail = require('./mails/sendEmails')
+// sendEmail('hernan.balatti@gmail.com', 'Bienvenido', 'Hola'); 
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
