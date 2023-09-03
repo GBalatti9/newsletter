@@ -25,5 +25,15 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Writer = sequelize.define(alias, cols, config);
+
+    Writer.associate = function(models) {
+        Writer.belongsToMany(models.Suscriber, {
+            as: 'suscriptores',
+            through: 'WriterSuscriber',
+            foreignKey: 'writer_id',
+            otherKey: 'suscriber_id',
+        })
+    }
+
     return Writer;
 }
