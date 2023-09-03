@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.buttons-container{
+    text-align: right;
+    padding: 2%;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.buttons-container input{
+    padding: 3%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#programming{
+    background-color: #d2a401;
+    color: white;
+}
+
+.edit-elements{
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.bold-italic-color{
+    width: 25%;
+}
+
+.order-buttons{
+    width: 25%;
+}
+.bold-italic-color, .order-buttons{
+    display: flex;
+    justify-content: space-around;
+    border-right: 0.5px solid #878787;
+}
+
+
+.bold-italic-color button, .order-buttons button{
+    background-color: white;
+    border: 0.5px solid #ebebeb;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+    border-radius: 5px;
+}
+
+.bold-italic-color button:hover, .order-buttons button:hover{
+    box-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    /* background-color: rgb(175, 175, 175); */
+}
+
+@media only screen and (min-width: 480px){
+    .edit-elements{
+        padding: 1%;
+    }
+    .bold-italic-color{
+        width: 10%;
+    }
+    
+    .order-buttons{
+        width: 10%;
+    }
+
+    .buttons-container input{
+        padding: 1%;
+    }
+
+    .bold-italic-color button, .order-buttons button{
+        width: 34px;
+        height: 32px;
+    }
+
+    .bold-italic-color button svg{
+        width: 15px;
+        height: 15px;
+    }
+    
+}
