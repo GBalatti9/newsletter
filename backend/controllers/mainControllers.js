@@ -1,11 +1,17 @@
-const { Suscriber } = require('../database/models');
+const { Suscriber, Writer } = require('../database/models');
 const sendEmail = require('../mails/sendEmails');
 
 module.exports = {
-    getRegister: (req, res) => {
-        res.render('home', {
-            error: {}
-        })
+    getRegister: async (req, res) => {
+        try {
+            const findWriter = await Writer.findByPk(1);
+            res.render('home', {
+                error: {},
+                writer: findWriter
+            })
+        } catch (error) {
+            console.log(error);
+        }
     },
 
     postRegister: async (req, res) => {

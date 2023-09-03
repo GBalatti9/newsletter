@@ -16,14 +16,15 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         created_at: {
-            type: dataTypes.DATE
-        }
+            type: dataTypes.DATE,
+            allowNull: true,
+            field: 'created_at',
+        },
     }
 
     let config = {
         tableName: 'newsletters_content',
-        created_at: true,
-        updated_at: false,
+        timestamps: false,
     }
 
     let Newsletter = sequelize.define(alias, cols, config);
