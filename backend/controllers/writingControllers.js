@@ -1,3 +1,4 @@
+const { Newsletter } = require('../database/models');
 const sendEmails = require('../mails/sendEmails');
 
 module.exports = {
@@ -6,8 +7,11 @@ module.exports = {
     },
 
     postNewsletter: async (req, res) => {
-        let infoToString = req.body.h1Title.toString();
-        await sendEmails('Envio desde la carga del newsletter', infoToString, 'gas.balatti@gmail.com');
+        try {
+            await Newsletter
+        } catch (error) {
+            
+        }
         res.send('Newsletter cargado con éxito');
     }
 }
