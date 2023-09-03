@@ -4,9 +4,7 @@ const methodOverride = require('method-override');
 
 const app = express();
 
-const { mainRoutes, adminRoutes } = require('./routes');
-const sendEmail = require('./mails/sendEmails')
-// sendEmail('hernan.balatti@gmail.com', 'Bienvenido', 'Hola'); 
+const { mainRoutes, adminRoutes, writingRoutes } = require('./routes');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -21,5 +19,6 @@ app.set('views', [
 
 app.use(mainRoutes);
 app.use(adminRoutes);
+app.use('/user' ,writingRoutes);
 
 app.listen(3000, () => console.log('Servidor escuchando en el puerto http://localhost:3000/ 🚀'))
