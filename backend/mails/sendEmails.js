@@ -1,7 +1,7 @@
 
 const transporter = require('./configEmail');
 
-const sendEmail = async (to, subject, content) => {
+const sendEmail = async (subject, content, ...to) => {
 
     const optionMail = {
         from: 'gas.balatti@gmail.com',

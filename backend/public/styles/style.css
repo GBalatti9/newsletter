@@ -63,3 +63,8 @@ form{
     background-color: rgb(87, 87, 87);
     color: white;
 }
+
+.error{
+    color: red;
+    font-family: Montserrat, sans-serif;
+}

@@ -20,6 +20,9 @@
                     <input type="email" name="emailSuscriber" class="email-suscriber" placeholder="Ingresá tu mail...">
                     <input type="submit" value="Suscribirse" class="btn-submit-login">
                 </div>
+                <% if(error.msg) {%>
+                    <p class="error"><%= error.msg %></p>
+                <% } %>
             </form>
         </div>
     </div>
