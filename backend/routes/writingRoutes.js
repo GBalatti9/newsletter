@@ -4,10 +4,10 @@ const writingControllers = require('../controllers/writingControllers');
 
 const router = express.Router();
 
-// @GET /user/content-creator
-router.get('/content-creator', writingControllers.getBoard);
+// @GET /user/:id/content-creator
+router.get('/:id/content-creator', writingControllers.getBoard);
 
-// @POST /user/content-creator
-router.post('/content-creator', writingControllers.postNewsletter);
+// @POST /user/:id/content-creator
+router.post('/:id/content-creator', writingControllers.postNewsletter);
 
 module.exports = router;
