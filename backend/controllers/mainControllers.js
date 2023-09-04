@@ -9,6 +9,7 @@ module.exports = {
                 error: {},
                 writer: findWriter
             })
+            console.log(findWriter);
         } catch (error) {
             console.log(error);
         }
@@ -17,6 +18,7 @@ module.exports = {
     postRegister: async (req, res) => {
         let email = req.body.emailSuscriber;
         let writerId = req.body.writerId;
+        console.log(writerId);
         // Primero se comprueba si no existe un usuario con ese mail
         try {
             const [suscriber, created] = await Suscriber.findOrCreate({
@@ -32,7 +34,7 @@ module.exports = {
                     let html = `<h1>Gracias por suscribirte</h1>`;
                     let content = 'Si llegaste hasta acá probablemente estés interesado en la tecnología como yo. Te doy la bienvenida a este proyecto personal en el que comparto la visión de personas que trabajan en el mundo de sistemas. Espero lo disfrutes. Bienvenido/a!'
                     sendEmail('Bienvenido/a', html, content, email);
-                    
+
                     setTimeout(() => {
                         res.render('welcome');
                     }, 2000);
@@ -42,7 +44,8 @@ module.exports = {
                 res.render('home', {
                     error: {
                         msg: 'El mail ya está registrado',
-                    }
+                    },
+                    writer: writerId,
                 });
             }
         } catch (error) {
