@@ -8,13 +8,17 @@ module.exports = {
 
     postNewsletter: async (req, res) => {
         console.log(req.params.id);
+        let date = req.body.programmingDate;
+        let content = req.body.h1Title;
         try {
             const postContent = await Newsletter.create({
                 id_user_creator: req.params.id,
-                content: req.body.h1Title
+                content: content,
+                release_date: date,
+                send: 0,
             })
             console.log(postContent);
-            res.render('sendTime', {id: req.params.id});
+            res.redirect(`/user/${req.params.id}/content-creator`);
         } catch (error) {
             console.log(error);
         }

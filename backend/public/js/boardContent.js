@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
         }
         else {
             console.log('todo listo para enviar');
-            programmingForm.submit();
+            // programmingForm.submit();
         }
 
     })
