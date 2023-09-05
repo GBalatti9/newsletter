@@ -20,6 +20,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: true,
             field: 'created_at',
         },
+        release_date: {
+            type: dataTypes.DATE,
+            allowNull: false,
+        },
+        send: {
+            type: dataTypes.INTEGER,
+        }
     }
 
     let config = {

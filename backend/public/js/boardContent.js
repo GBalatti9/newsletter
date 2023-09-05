@@ -19,10 +19,10 @@ window.addEventListener('load', () => {
 
     programmingDate.addEventListener('input', e => {
         let length = e.target.value.length;
-
+        
         let today = new Date();
         let formattedDate = new Date(e.target.value);
-
+        
         if(length === 0){
             console.log('No se puede enviar vacio');
         } else if (today > formattedDate){
@@ -30,7 +30,8 @@ window.addEventListener('load', () => {
         }
         else {
             console.log('todo listo para enviar');
+            programmingForm.submit();
         }
-        
+
     })
 })
