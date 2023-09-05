@@ -9,7 +9,9 @@ body{
 }
 
 .buttons-container{
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
     padding: 2%;
     border-bottom: 1px solid #c3c3c3;
 }
