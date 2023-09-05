@@ -9,11 +9,15 @@
 </head>
 
 <body>
-    <form action='/user/<%= id %>/content-creator' method="POST">
+    <form action='/user/<%= id %>/content-creator' method="POST" id="form">
         <div class="buttons-container">
-            <input type="submit" value="Borrador">
+            <input type="submit" value="Borrador" id="draft">
             <!-- <input type="submit" value="Enviar ahora" id=""> -->
-            <input type="submit" value="Programar" id="programming">
+            <input type="submit" value="Programar" id="programming" class="programming">
+            <div class="date" id="programming-date" style="display: none;">
+                <input type="date" name="programming-date">
+                <input type="submit" value="Confirmar" id="check-date" class="programming">
+            </div>
         </div>
         <div class="board">
             <div class="edit-elements">
@@ -69,6 +73,8 @@
             </div>
         </div>
     </form>
+
+    <script src="/js/boardContent.js"></script>
 </body>
 
 </html>
