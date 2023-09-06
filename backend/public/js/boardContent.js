@@ -19,9 +19,9 @@ window.addEventListener('load', () => {
 
     programmingDate.addEventListener('input', e => {
         let length = e.target.value.length;
-        
         let today = new Date();
-        let formattedDate = new Date(e.target.value);
+        let formattedDate = e.target.value;
+        console.log(formattedDate);
         
         if(length === 0){
             console.log('No se puede enviar vacio');

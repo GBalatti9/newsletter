@@ -23,6 +23,7 @@ module.exports = (sequelize, dataTypes) => {
         release_date: {
             type: dataTypes.DATE,
             allowNull: false,
+            field: 'release_date'
         },
         send: {
             type: dataTypes.INTEGER,
